@@ -1,0 +1,44 @@
+#body {
+    background-color: lightblue;
+}
+
+.alert-me {
+    background-color: blueviolet;
+    color: white;
+    margin-bottom: 25px;
+    margin-top: 35px;
+    padding: 30px;
+    width: 33%;
+    border-radius: 10px;
+    border: 3px solid white;
+}
+
+.change-color {
+    background-color: blueviolet;
+    color: white;
+    float: right;
+    width: 33%;
+    padding: 25px;
+    border-radius: 10px;
+    border: 3px solid white;
+    
+}
+
+.text-tester {
+    background-color: blueviolet;
+    color: white;
+    margin-top: 25px;
+    padding: 30px;
+    width: 33%;
+    border-radius: 10px;
+    border: 3px solid white;
+}
+.add-text {
+    background-color: blueviolet;
+    color: white;
+    float: right;
+    width: 33%;
+    padding: 25px;
+    border-radius: 10px;
+    border: 3px solid white;
+}

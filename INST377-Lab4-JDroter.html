@@ -1,0 +1,85 @@
+<html>
+    <head>
+        <title>INST377 - Lab 4</title>
+        <link rel="stylesheet" href="INST377-Lab4-CSS.css">
+    </head>
+
+    <body id="body">
+        <h1 id="header">
+            INST377 - Lab 4
+        </h1>
+        <div class="main-container">
+            <div class="alert-me">
+                <form name="alertForm">
+                    <label>Name:</label>
+                    <input type="text" id="alertInput" name="alert" required>
+                    <button onclick="alertName()">Alert Me!</button>
+                </form>
+            </div>
+
+            <div class="change-color">
+                <button onclick="changeColor()">Change Color</button>
+            </div>
+
+            <div class="text-tester">
+                <form name="validationForm">
+                    <label>Name:</label>
+                    <input type="text" name="name">
+                    <button type="button" onclick="return formValidation()">Validate Text</button>
+                </form>
+                
+            </div>
+
+            <div class="add-text">
+                <button onclick="addText()">Add Text</button>
+            </div>
+        </div>
+        
+        
+
+        <script type="text/javascript">
+            function changeColor() {
+                const body = document.getElementById('body');
+
+                if (body.style.backgroundColor === '', body.style.backgroundColor === 'lightblue') {
+                    body.style.backgroundColor = "lightcoral";
+                } else {
+                    body.style.backgroundColor = "lightblue";
+                }
+            }
+
+            function formValidation() {
+                const name = document.forms["validationForm"]["name"].value;
+                var validation = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/;
+            
+                if (name == "") {
+                    alert('Enter a name');
+                    return false;
+                }
+
+                if (validation.test(name)) {
+                    alert('How about.... nah!');
+                    return false;
+                } else {
+                    return true;
+                }
+            }
+
+            function alertName() {
+                const alertInput = document.getElementById('alertInput').value;
+                
+                if (alertInput) {
+                    alert("Hi " + alertInput + "!");
+                }
+                    
+            }
+
+            function addText() {
+                const heading = document.getElementById('header');
+                if (!heading.textContent.includes("Add Text")) {
+                    heading.textContent += "Add Text";
+                }
+            }
+        </script>
+    </body>
+</html>
